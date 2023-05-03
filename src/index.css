@@ -1,0 +1,77 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+.header{
+  padding: 30px;
+  background-color: #189958;
+  display: flex;
+  align-items: center;
+}
+
+
+.header--title{
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.header--logo{
+  width: 90px;
+}
+
+/* DATE */
+.date--content{
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  padding: 50px;
+  background-color: #189958;
+  margin-bottom: 50px;
+}
+
+.date--input{
+  height: 40px;
+  width: 10em;
+  font-size: 20px;
+  text-align: center; 
+}
+
+/* LINEUP */
+.lineups--container{
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-auto-rows: 500px;
+  grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+}
+
+.lineups--item{
+  border: 1px solid black;
+  height: 500px;
+}
+
+.lineups-teams{
+  margin: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.lineups--startinglineup{
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.lineups--awayplayer{
+  margin-bottom: 5px;
+}
+
+
