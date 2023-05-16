@@ -22,6 +22,8 @@ function App () {
   const lineups = Object.entries(lineup).map(([k, item]) => {
     return (
       item.Status !== 'Postponed' &&
+      item.Status !== 'Suspended' &&
+      item.AwayBattingLineup.length > 0 &&
       <Lineups
       key={k}
       position={k}
