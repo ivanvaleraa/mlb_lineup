@@ -4,13 +4,17 @@ function Lineups (props) {
   const player = props
   const awayPlayerName = []
   const homePlayerName = []
+  let awayConfirmed = ''
+  let homeConfirmed = ''
 
   for (let i = 0; i < player.AwayBattingLineup.length; i++) {
+    awayConfirmed = player.AwayBattingLineup[i].Confirmed
     awayPlayerName.push(player.AwayBattingLineup[i].FirstName + ' ' + player.AwayBattingLineup[i].LastName)
   }
 
   for (let i = 0; i < player.HomeBattingLineup.length; i++) {
     homePlayerName.push(player.HomeBattingLineup[i].FirstName + ' ' + player.HomeBattingLineup[i].LastName)
+    homeConfirmed = player.HomeBattingLineup[i].Confirmed
   }
 
   let awayBattingOrder = 0
@@ -34,12 +38,10 @@ function Lineups (props) {
     )
   })
 
-  // console.log("Nombre: "+player.AwayBattingLineup[0].FirstName)
   return (
         <div>
             <div className="lineups--item">
                 <div className="lineups-teams">
-
                     <div className="lineups--awayteam">
                         <div className="lineups--awayteam">
                             <h1 className="lineups--awayteamname">{player.AwayTeam}</h1>
@@ -49,7 +51,9 @@ function Lineups (props) {
                             {player.AwayStartingPitcher.FirstName +
                             ' ' + player.AwayStartingPitcher.LastName}
                         </div>
-
+                        <div className="lineups--awayconfirmed">
+                            {awayConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}}></i> : <i class="fa-sharp fa-regular fa-hourglass-clock fa-xl" style={{color:'orange'}}></i>}
+                        </div>
                         <div className="lineups--startinglineup">
                             {awayPlayerInformation}
                         </div>
@@ -63,6 +67,10 @@ function Lineups (props) {
                         <div className="lineups--startingpitcher">
                             {player.HomeStartingPitcher.FirstName +
                             ' ' + player.HomeStartingPitcher.LastName}
+                        </div>
+
+                        <div className="lineups--homeconfirmed">
+                            {homeConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}}></i> : <i class="fa-sharp fa-regular fa-hourglass-clock fa-xl" style={{color:'orange'}}></i>}
                         </div>
 
                         <div className="lineups--startinglineup">

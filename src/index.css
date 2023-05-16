@@ -64,6 +64,10 @@ body{
   grid-template-columns: repeat(2, 1fr);
 }
 
+.lineups--startingpitcher {
+  padding-bottom: 10px;
+}
+
 .lineups--startinglineup{
   margin-top: 20px;
   margin-left: 10px;
