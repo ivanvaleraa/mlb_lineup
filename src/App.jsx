@@ -26,6 +26,7 @@ function App () {
       item.AwayBattingLineup.length > 0 &&
       item.HomeBattingLineup.length > 0 &&
       item.AwayStartingPitcher &&
+      item.HomeStartingPitcher &&
       <Lineups
       key={k}
       position={k}
