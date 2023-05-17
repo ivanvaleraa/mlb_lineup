@@ -24,6 +24,8 @@ function App () {
       item.Status !== 'Postponed' &&
       item.Status !== 'Suspended' &&
       item.AwayBattingLineup.length > 0 &&
+      item.HomeBattingLineup.length > 0 &&
+      item.AwayStartingPitcher &&
       <Lineups
       key={k}
       position={k}

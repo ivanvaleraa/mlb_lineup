@@ -13,8 +13,8 @@ function Lineups (props) {
   }
 
   for (let i = 0; i < player.HomeBattingLineup.length; i++) {
-    homePlayerName.push(player.HomeBattingLineup[i].FirstName + ' ' + player.HomeBattingLineup[i].LastName)
     homeConfirmed = player.HomeBattingLineup[i].Confirmed
+    homePlayerName.push(player.HomeBattingLineup[i].FirstName + ' ' + player.HomeBattingLineup[i].LastName)
   }
 
   let awayBattingOrder = 0
@@ -52,7 +52,7 @@ function Lineups (props) {
                             ' ' + player.AwayStartingPitcher.LastName}
                         </div>
                         <div className="lineups--awayconfirmed">
-                            {awayConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}}></i> : <i class="fa-sharp fa-regular fa-hourglass-clock fa-xl" style={{color:'orange'}}></i>}
+                            {awayConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}} alt='Confirmado' ></i> : <i class="fa-solid fa-xmark fa-xl" style={{color: 'red'}} alt='No Confirmado'></i>}
                         </div>
                         <div className="lineups--startinglineup">
                             {awayPlayerInformation}
@@ -70,7 +70,7 @@ function Lineups (props) {
                         </div>
 
                         <div className="lineups--homeconfirmed">
-                            {homeConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}}></i> : <i class="fa-sharp fa-regular fa-hourglass-clock fa-xl" style={{color:'orange'}}></i>}
+                        {homeConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}} alt='Confirmado' ></i> : <i class="fa-solid fa-xmark fa-xl" style={{color: 'red'}} alt='No Confirmado'></i>}
                         </div>
 
                         <div className="lineups--startinglineup">
