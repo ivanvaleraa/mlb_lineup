@@ -52,7 +52,7 @@ function Lineups (props) {
                             ' ' + player.AwayStartingPitcher.LastName}
                         </div>
                         <div className="lineups--awayconfirmed">
-                            {awayConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}} alt='Confirmado' ></i> : <i class="fa-solid fa-xmark fa-xl" style={{color: 'red'}} alt='No Confirmado'></i>}
+                            {awayConfirmed === true ? <i class="fa-solid fa-regular fa-check fa-xl" style={{color:'green'}} alt='Confirmado' ></i> : <i class="fa-solid fa-xmark fa-xl" style={{color: 'red'}} alt='Noo Confirmado'></i>}
                         </div>
                         <div className="lineups--startinglineup">
                             {awayPlayerInformation}
